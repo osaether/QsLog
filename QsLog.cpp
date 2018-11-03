@@ -242,7 +242,7 @@ void Logger::Helper::writeToLog()
     Logger::instance().enqueueWrite(completeMessage, level);
 }
 
-Logger::Helper::~Helper()
+Logger::Helper::~Helper() noexcept (false)
 {
     try {
         writeToLog();

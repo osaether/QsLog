@@ -71,7 +71,7 @@ public:
             level(logLevel),
             qtDebug(&buffer)
         {}
-        ~Helper();
+        ~Helper() noexcept (false);
         QDebug& stream(){ return qtDebug; }
 
     private:
